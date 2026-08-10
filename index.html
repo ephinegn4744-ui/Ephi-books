@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ephi Books</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    header {
+      background: #4f46e5;
+      color: white;
+      padding: 18px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+      font-size: 15px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: white;
+    }
+
+    .hero h2 {
+      font-size: 35px;
+      color: #4f46e5;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #4f46e5;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 7px;
+    }
+
+    .books {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .books h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .book-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .book {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .book-cover {
+      height: 200px;
+      background: #4f46e5;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-size: 27px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .book h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .book p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      color: #4f46e5;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      background: #eef2ff;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .contact h2 {
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      margin: 8px;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 700px) {
+      .book-container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>📚 Ephi Books</h1>
+
+    <nav>
+      <a href="#home">መነሻ</a>
+      <a href="#books">መጽሐፍት</a>
+      <a href="#contact">አግኙን</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h2>እውቀትን በአንድ ጠቅታ</h2>
+
+    <p>
+      ጥራት ያላቸውን ዲጂታል መጽሐፍት
+      በቀላሉ ይግዙና ያንብቡ።
+    </p>
+
+    <a href="#books" class="btn">
+      መጽሐፍትን ይመልከቱ
+    </a>
+  </section>
+
+  <section class="books" id="books">
+
+    <h2>📚 የእኛ መጽሐፍት</h2>
+
+    <div class="book-container">
+
+      <div class="book">
+
+        <div class="book-cover">
+          ስኬታማ<br>መሆን
+        </div>
+
+        <h3>ስኬታማ መሆን</h3>
+
+        <p>
+          ስለ ስኬት፣ የግል እድገት
+          እና የሕይወት አላማ።
+        </p>
+
+        <div class="price">150 ብር</div>
+
+        <a href="#contact" class="btn">
+          ግዛ
+        </a>
+
+      </div>
+
+      <div class="book">
+
+        <div class="book-cover">
+          አምልኮ
+        </div>
+
+        <h3>አምልኮ</h3>
+
+        <p>
+          ስለ አምልኮ እና
+          መንፈሳዊ ሕይወት።
+        </p>
+
+        <div class="price">150 ብር</div>
+
+        <a href="#contact" class="btn">
+          ግዛ
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="contact" id="contact">
+
+    <h2>💳 ክፍያ እና አግኙን</h2>
+
+    <p><strong>CBE Birr:</strong> 0907114744</p>
+
+    <p><strong>Telegram:</strong> @Ephi4744</p>
+
+    <p><strong>Email:</strong> ephinegn4744@gmail.com</p>
+
+    <p>
+      ክፍያ ከፈጸሙ በኋላ
+      የክፍያ ማረጋገጫ በTelegram ይላኩ።
+    </p>
+
+  </section>
+
+  <footer>
+    © 2026 Ephi Books — መብቱ በሙሉ የተጠበቀ ነው።
+  </footer>
+
+</body>
+</html>
