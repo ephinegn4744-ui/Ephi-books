@@ -1,1 +1,519 @@
+```html
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ephi Books | የዲጂታል መጽሐፍ መደብር</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f8fc;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #4f46e5;
+      color: white;
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 15px;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: #4f46e5;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: #6b7280;
+      font-size: 18px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      background: #4f46e5;
+      color: white;
+      text-decoration: none;
+      padding: 13px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    /* SECTION */
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 65px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 40px;
+      color: #111827;
+    }
+
+    /* BOOKS */
+
+    .books {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .book {
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    /* BOOK COVER */
+
+    .cover {
+      height: 310px;
+      max-width: 220px;
+      margin: 0 auto 25px;
+      border-radius: 8px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-shadow: 8px 10px 20px rgba(0,0,0,0.18);
+    }
+
+    .cover-success {
+      background: linear-gradient(145deg, #4f46e5, #7c3aed);
+    }
+
+    .cover-worship {
+      background: linear-gradient(145deg, #0f766e, #115e59);
+    }
+
+    .cover-small {
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-bottom: 35px;
+    }
+
+    .cover-title {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .cover-line {
+      width: 55px;
+      height: 2px;
+      background: white;
+      margin: 25px 0;
+    }
+
+    .cover-bottom {
+      font-size: 13px;
+    }
+
+    .book h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .book-description {
+      color: #6b7280;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      color: #4f46e5;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      background: #4f46e5;
+      color: white;
+      text-decoration: none;
+      padding: 12px 30px;
+      border-radius: 7px;
+      font-weight: bold;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: #eef2ff;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 750px;
+      margin: auto;
+      color: #4b5563;
+      font-size: 17px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: white;
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact-item {
+      background: #f7f8fc;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+
+    .telegram-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #229ed9;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      color: #d1d5db;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        padding: 55px 20px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .books {
+        grid-template-columns: 1fr;
+      }
+
+      .cover {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+      <div class="logo">
+        📚 Ephi Books
+      </div>
+
+      <nav>
+        <a href="#home">መነሻ</a>
+        <a href="#books">መጽሐፍት</a>
+        <a href="#about">ስለ እኛ</a>
+        <a href="#contact">አግኙን</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <h1>
+      እውቀትን በአንድ ጠቅታ 📚
+    </h1>
+
+    <p>
+      ጥራት ያላቸውን ዲጂታል መጽሐፍት
+      በቀላሉ ይግዙ፣ ያንብቡ፣
+      እውቀትዎንም ያሳድጉ።
+    </p>
+
+    <a href="#books" class="hero-btn">
+      📚 መጽሐፍትን ይመልከቱ
+    </a>
+
+  </section>
+
+
+  <!-- BOOKS -->
+
+  <section class="section" id="books">
+
+    <h2 class="section-title">
+      📚 የእኛ መጽሐፍት
+    </h2>
+
+    <div class="books">
+
+
+      <!-- BOOK 1 -->
+
+      <div class="book">
+
+        <div class="cover cover-success">
+
+          <div class="cover-small">
+            EPHI BOOKS
+          </div>
+
+          <div class="cover-title">
+            ስኬታማ<br>
+            መሆን
+          </div>
+
+          <div class="cover-line"></div>
+
+          <div class="cover-bottom">
+            የስኬት መንገድ
+          </div>
+
+        </div>
+
+        <h3>
+          ስኬታማ መሆን
+        </h3>
+
+        <p class="book-description">
+          ስለ ስኬት፣ የግል እድገት
+          እና የሕይወት አላማ
+          የሚያስተምር መጽሐፍ።
+        </p>
+
+        <div class="price">
+          150 ብር
+        </div>
+
+        <a
+          href="payment.html?book=success"
+          class="buy-btn">
+
+          🛒 ግዛ
+
+        </a>
+
+      </div>
+
+
+      <!-- BOOK 2 -->
+
+      <div class="book">
+
+        <div class="cover cover-worship">
+
+          <div class="cover-small">
+            EPHI BOOKS
+          </div>
+
+          <div class="cover-title">
+            አምልኮ
+          </div>
+
+          <div class="cover-line"></div>
+
+          <div class="cover-bottom">
+            መንፈሳዊ ሕይወት
+          </div>
+
+        </div>
+
+        <h3>
+          አምልኮ
+        </h3>
+
+        <p class="book-description">
+          ስለ አምልኮ እና
+          መንፈሳዊ ሕይወት
+          የሚያስተምር መጽሐፍ።
+        </p>
+
+        <div class="price">
+          150 ብር
+        </div>
+
+        <a
+          href="payment.html?book=worship"
+          class="buy-btn">
+
+          🛒 ግዛ
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="section about" id="about">
+
+    <h2 class="section-title">
+      ℹ️ ስለ Ephi Books
+    </h2>
+
+    <p>
+      Ephi Books በአማርኛ ቋንቋ የተዘጋጁ
+      ዲጂታል መጽሐፍትን በቀላሉ
+      ለአንባቢዎች ለማድረስ የተፈጠረ
+      የመጽሐፍ መደብር ነው።
+    </p>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="section contact" id="contact">
+
+    <h2 class="section-title">
+      📞 አግኙን
+    </h2>
+
+    <div class="contact-box">
+
+      <div class="contact-item">
+        💳 <strong>CBE Birr:</strong>
+        0907114744
+      </div>
+
+      <div class="contact-item">
+        📧 <strong>Email:</strong>
+        ephinegn4744@gmail.com
+      </div>
+
+      <a
+        href="https://t.me/Ephi4744"
+        target="_blank"
+        class="telegram-btn">
+
+        📱 Telegram: @Ephi4744
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h3>
+      📚 Ephi Books
+    </h3>
+
+    <p>
+      እውቀትን በአንድ ጠቅታ
+    </p>
+
+    <p>
+      © 2026 Ephi Books — መብቱ በሙሉ የተጠበቀ ነው።
+    </p>
+
+  </footer>
+
+</body>
+</html>
+```
 
