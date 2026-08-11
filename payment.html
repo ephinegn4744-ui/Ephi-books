@@ -114,7 +114,99 @@
     .steps li {
       margin: 8px 0;
       margin-left: 20px;
-    }
+    }```html
+<div class="order-form">
+
+  <h3>📝 የግዢ መረጃ</h3>
+
+  <p class="form-note">
+    ክፍያ ካደረጉ በኋላ እባክዎ ይህን መረጃ ይሙሉ።
+  </p>
+
+  <label for="customerName">👤 ስም</label>
+  <input
+    type="text"
+    id="customerName"
+    placeholder="ሙሉ ስምዎን ያስገቡ">
+
+  <label for="phone">📱 ስልክ ቁጥር</label>
+  <input
+    type="tel"
+    id="phone"
+    placeholder="ስልክ ቁጥርዎን ያስገቡ">
+
+  <label for="telegram">✈️ Telegram Username</label>
+  <input
+    type="text"
+    id="telegram"
+    placeholder="@username">
+
+  <button
+    type="button"
+    class="send-order"
+    onclick="sendOrder()">
+
+    📩 የግዢ መረጃ ላክ
+
+  </button>
+
+</div>
+
+<script>
+
+function sendOrder() {
+
+  const name =
+    document.getElementById("customerName").value.trim();
+
+  const phone =
+    document.getElementById("phone").value.trim();
+
+  const telegram =
+    document.getElementById("telegram").value.trim();
+
+  const params =
+    new URLSearchParams(window.location.search);
+
+  const book =
+    params.get("book");
+
+  let bookName = "መጽሐፍ";
+
+  if (book === "success") {
+    bookName = "ስኬታማ መሆን";
+  }
+
+  if (book === "worship") {
+    bookName = "አምልኮ";
+  }
+
+  if (!name || !phone || !telegram) {
+
+    alert("እባክዎ ሁሉንም መረጃ ይሙሉ።");
+
+    return;
+  }
+
+  const message =
+    "📚 Ephi Books - አዲስ ትዕዛዝ%0A%0A" +
+    "📖 መጽሐፍ: " + encodeURIComponent(bookName) + "%0A" +
+    "👤 ስም: " + encodeURIComponent(name) + "%0A" +
+    "📱 ስልክ: " + encodeURIComponent(phone) + "%0A" +
+    "✈️ Telegram: " + encodeURIComponent(telegram) + "%0A%0A" +
+    "💳 ክፍያ: 150 ብር%0A" +
+    "🏦 CBE Birr: 0907114744";
+
+  window.open(
+    "https://t.me/Ephi4744?text=" + message,
+    "_blank"
+  );
+
+}
+
+</script>
+```
+
 
     .telegram {
       display: block;
