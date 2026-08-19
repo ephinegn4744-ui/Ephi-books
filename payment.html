@@ -1,5 +1,4 @@
 
-```h
 <!DOCTYPE html>
 <html lang="am">
 <head>
@@ -313,7 +312,14 @@ function sendOrder() {
       color: #777;
     }
   </style>
-</head>
+</head><script>
+document.querySelectorAll('a[href*="t.me"]').forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    window.location.href = link.href;
+  });
+});
+</script>
 
 <body>
 
@@ -384,7 +390,7 @@ function sendOrder() {
 
     <a
       class="telegram"
-      href="https://t.me/Ephi4744"
+      href="https://t.me/Ephi4744">
 
       📱 የክፍያ ማረጋገጫ ላክ
 
